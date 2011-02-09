@@ -79,6 +79,8 @@ This should run with at least Python 2.4.
 	penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 	Pellentesque porttitor mi id felis. Maecenas nec augue. Praesent a quam 
 	pretium leo congue accumsan.</p>'
+    >>> t.posts[4].tags
+    [u'lorem', u'ipsum', u'dolor', u'sit', u'amet']
 
 ## Dependencies ##
 
