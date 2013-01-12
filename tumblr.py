@@ -23,7 +23,6 @@ __TODO__ = """TODO List
 # Build using "python setup.py bdist_egg"
 
 import urlparse
-import httplib2
 from urllib import urlencode
 try:
     import xml.etree.cElementTree as ElementTree
@@ -523,6 +522,8 @@ def _parse_content_type(ct):
     return content_type, charset
 
 def _fetch(url, http_method="GET", form_data=None, cache_dir=DEFAULT_HTTP_CACHE_DIR, proxy_info=None):
+    import httplib2
+
     """Requests the Tumblr API URL and deals with any HTTP-related errors.
     
     Returns both an httplib2 Response object and the content."""
