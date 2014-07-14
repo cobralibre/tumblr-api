@@ -635,6 +635,9 @@ def parse(url_or_file, cache_dir=DEFAULT_HTTP_CACHE_DIR, proxy_info=None):
             post = Audio(postdata)
         else:
             post = Post(postdata)
+        # Populate a list of tags, if any
+        tags = postdata.findall('tag')
+        post.tags = [unicode(tag.text) for tag in tags]
         # Get the source feed, if present
         try:
             if post.source_feed_id:
